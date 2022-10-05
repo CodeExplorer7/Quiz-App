@@ -1,0 +1,40 @@
+.app {
+  background: url(https://img2.akspic.ru/crops/1/1/2/1/21211/21211-besplodnye_zemli-horsshu_bend-vershina_skaly-nacionalnyj_park_brajskanon-grand_kanon_villidzh-3840x2160.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 850px;
+  width: 1400px;
+}
+
+.question-text {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.question-count {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.answer-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.quizz {
+  width: 300px
+}
+
+.section__score {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  color: white
+}
