@@ -50,8 +50,9 @@ const App = function () {
   const handleAnswerOptionClick = (isCorrect: boolean) => {
 
     if (isCorrect) {
-      setScore(score + 1)
+      setScore(score => score + 1)
     }
+
 
     const nextQuestion = currentQuestion + 1
 
