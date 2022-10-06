@@ -75,11 +75,13 @@ function App() {
 
   }
 
-  if (score < questions.length) {
-    var a = 'Пробуй ещё'
-  } else {
-    var a = 'Красава'
-  }
+  // if (score < questions.length) {
+  //   var a = 'Пробуй ещё'
+  // } else {
+  //   var a = 'Красава'
+  // }
+
+  let status = (score < questions.length) ? 'Не оч((': 'Красава';
 
   return (
     <div className="app" >
@@ -88,7 +90,7 @@ function App() {
           ?
           <div className="section__score">
             <div>Правильных ответов {score} из {questions.length}</div>
-            <div className="status">Так как Вы набрали {score} ответов из {questions.length}, Ваш статус - {a}</div>
+            <div className="status">Так как Вы набрали {score} ответов из {questions.length}, Ваш статус - {status}</div>
             <button className="refresh__btn" onClick={refresh} >Попробовать еще раз</button>
             </div>
             :  <div className='quizz'>
