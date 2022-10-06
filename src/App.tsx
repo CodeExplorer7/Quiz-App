@@ -67,7 +67,7 @@ function App() {
 
   }
 
-  const refresh = () => {
+  const handleRefresh = () => {
 
     setCurrentQuestion(0)
     setScore(0)
@@ -75,11 +75,6 @@ function App() {
 
   }
 
-  // if (score < questions.length) {
-  //   var a = 'Пробуй ещё'
-  // } else {
-  //   var a = 'Красава'
-  // }
 
   let status = (score < questions.length) ? 'Не оч((': 'Красава';
 
@@ -91,7 +86,7 @@ function App() {
           <div className="section__score">
             <div>Правильных ответов {score} из {questions.length}</div>
             <div className="status">Так как Вы набрали {score} ответов из {questions.length}, Ваш статус - {status}</div>
-            <button className="refresh__btn" onClick={refresh} >Попробовать еще раз</button>
+            <button className="refresh__btn" onClick={handleRefresh} >Попробовать еще раз</button>
             </div>
             :  <div className='quizz'>
               <div className='question-section'>
