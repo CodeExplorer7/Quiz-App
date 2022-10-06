@@ -3,7 +3,7 @@ import './App.css';
 
 
 
-function App() {
+const App = function () {
   const questions = [
     {
       questionText: 'Столица США?',
