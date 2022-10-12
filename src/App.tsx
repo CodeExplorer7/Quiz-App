@@ -3,7 +3,7 @@ import './App.css';
 import Data from './components/Data.json';
 
 
-
+export {App};
 const App = function () {
   const questions = Data;
 
@@ -83,6 +83,6 @@ const App = function () {
 }
 
 
-export {App};
+
 
 
