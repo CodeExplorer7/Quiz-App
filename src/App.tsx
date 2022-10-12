@@ -11,7 +11,7 @@ const App = function () {
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
 
-  const handleAnswerOptionClick = (isCorrect: string) => {
+  const handleAnswerOptionClick = (isCorrect: boolean) => {
 
     if (isCorrect) {
       setScore(score => score + 1)
@@ -64,7 +64,10 @@ const App = function () {
                   {questions[currentQuestion].answerOptions.map(item =>
                   (<button
 
+                    
+
                     onClick={() => handleAnswerOptionClick(item.isCorrect)}
+                    
 
                   >{item.answerText}</button>
                   )
