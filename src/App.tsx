@@ -3,10 +3,10 @@ import './App.css';
 import Data from './components/Data.json';
 import {Result} from './components/Result';
 import {Statusbar} from './components/Statusbar';
-import {Refresh_btn} from './components/Refresh_btn';
-import {Question_count} from './components/Question_count';
-import {Question_text} from "./components/Question_text";
-import {Answer_section} from "./components/Answer_section";
+import {RefreshBtn} from './components/RefreshBtn';
+import {QuestionCount} from './components/QuestionCount';
+import {QuestionText} from "./components/QuestionText";
+import {AnswerSection} from "./components/AnswerSection";
 
 
 
@@ -56,14 +56,14 @@ export const App = () => {
         <div className="section__score">
           <Result score={score} questions={questions} />
           <Statusbar score={score} questions={questions} status={status} />
-          <Refresh_btn handleRefresh={handleRefresh}/>
+          <RefreshBtn handleRefresh={handleRefresh}/>
         </div>
         : <div className='quizz'>
           
           <div className='question-section'>
-            <Question_count currentQuestion={currentQuestion} questions={questions}/>
-            <Question_text questions={questions[currentQuestion]}/>
-            <Answer_section questions={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick}/>
+            <QuestionCount currentQuestion={currentQuestion} questions={questions}/>
+            <QuestionText questions={questions[currentQuestion]}/>
+            <AnswerSection questions={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick}/>
           </div>
 
         </div>
