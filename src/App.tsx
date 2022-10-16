@@ -49,7 +49,7 @@ export const App = () => {
 
 
   let status = (score < questions.length) ? 'МЕГАПЛОХ' : 'МЕГАПЛОХ';
-  var ScoreLeft = questions.length - score
+  let ScoreLeft = questions.length - score
   
 if (ScoreLeft > 0) {
 
