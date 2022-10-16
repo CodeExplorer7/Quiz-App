@@ -7,6 +7,7 @@ import {RefreshBtn} from './components/RefreshBtn';
 import {QuestionCount} from './components/QuestionCount';
 import {QuestionText} from "./components/QuestionText";
 import {AnswerSection} from "./components/AnswerSection";
+import {ScoreLeftToWin} from "./components/ScoreLeftToWin";
 
 
 
@@ -47,7 +48,10 @@ export const App = () => {
   };
 
 
-  let status = (score < questions.length) ? 'Не оч((' : 'Красава';
+  let status = (score < questions.length) ? 'МЕГАПЛОХ' : 'МЕГАПЛОХ';
+  var ScoreLeft = questions.length - score
+  
+if (ScoreLeft > 0) {
 
   return (
     <div className="app">
@@ -56,6 +60,7 @@ export const App = () => {
         <div className="section__score">
           <Result score={score} questions={questions} />
           <Statusbar score={score} questions={questions} status={status} />
+          <ScoreLeftToWin ScoreLeftToWin={ScoreLeft} questions={questions} />
           <RefreshBtn handleRefresh={handleRefresh}/>
         </div>
         : <div className='quizz'>
@@ -72,6 +77,33 @@ export const App = () => {
 
 
   );
+} else {
+  return (
+    <div className="app">
+      {showScore
+        ?
+        <div className="section__score">
+          <Result score={score} questions={questions} />
+          <Statusbar score={score} questions={questions} status={status} />
+          
+          <RefreshBtn handleRefresh={handleRefresh}/>
+        </div>
+        : <div className='quizz'>
+          
+          <div className='question-section'>
+            <QuestionCount currentQuestion={currentQuestion} questions={questions}/>
+            <QuestionText questions={questions[currentQuestion]}/>
+            <AnswerSection questions={questions[currentQuestion]} handleAnswerOptionClick={handleAnswerOptionClick}/>
+          </div>
+
+        </div>
+        }
+        </div>
+
+
+  );
+}
+  
 }
 
 

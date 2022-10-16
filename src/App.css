@@ -1,11 +1,13 @@
+
 .app {
-  background: url(https://img2.akspic.ru/crops/1/1/2/1/21211/21211-besplodnye_zemli-horsshu_bend-vershina_skaly-nacionalnyj_park_brajskanon-grand_kanon_villidzh-3840x2160.jpg);
+  background: url(https://img2.akspic.ru/crops/1/1/2/1/21211/21211-besplodnye_zemli-horsshu_bend-vershina_skaly-nacionalnyj_park_brajskanon-grand_kanon_villidzh-3840x2160.jpg) ;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 850px;
-  width: 1400px;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh
 }
 
 .question-text {
