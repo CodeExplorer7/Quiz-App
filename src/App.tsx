@@ -48,7 +48,7 @@ export const App = () => {
   };
 
 
-  let status = (score < questions.length) ? 'МЕГАПЛОХ' : 'МЕГАПЛОХ';
+  let status = (score < questions.length) ? 'МЕГАПЛОХ' : 'МЕГАХОРОШ';
   let ScoreLeft = questions.length - score
   
 if (ScoreLeft > 0) {
