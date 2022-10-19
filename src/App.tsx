@@ -9,8 +9,6 @@ import { QuestionText } from "./components/QuestionText";
 import { AnswerSection } from "./components/AnswerSection";
 import { ScoreLeftToWin } from "./components/ScoreLeftToWin";
 
-
-
 export const App = () => {
   const questions = Data;
 
