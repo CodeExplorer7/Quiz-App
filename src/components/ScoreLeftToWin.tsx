@@ -6,7 +6,7 @@ export const ScoreLeftToWin = (props: {
 }) => {
   return (
     <div className="score-left-to-win">
-      Чтобы набрать максимальное количество правильных ответов (в данном quiz -{" "}
+      Чтобы набрать максимальное количество правильных ответов (в этом quiz -{" "}
       {props.questions.length}) Вам необходимо дать еще {props.ScoreLeftToWin}{" "}
       правильных ответов{" "}
     </div>
