@@ -14,7 +14,7 @@ export const AnswerSection = (props: any) => {
             | React.ReactFragment
             | React.ReactPortal
             | null
-            | undefined;
+            | undefined;  
         }) => (
           <button onClick={() => props.handleAnswerOptionClick(item.isCorrect)}>
             {item.answerText}
