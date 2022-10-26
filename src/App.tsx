@@ -16,6 +16,8 @@ export const App = () => {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
+  
+
   const handleAnswerOptionClick = (isCorrect: boolean) => {
     if (isCorrect) {
       setScore((score) => score + 1);
