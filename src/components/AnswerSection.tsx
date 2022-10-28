@@ -1,21 +1,19 @@
 import React from "react";
 
-export const AnswerSection = (props: any) => {
+export const AnswerSection = (props: {
+  question: {
+    questionText: string;
+    answerOptions: {
+      answerText: string;
+      isCorrect: boolean;
+    }[];
+  };
+  handleAnswerOptionClick(isCorrect: boolean): void;
+}) => {
   return (
     <div className="answer-section">
-      {props.questions.answerOptions.map(
-        (item: {
-          isCorrect: any;
-          answerText:
-            | string
-            | number
-            | boolean
-            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-            | React.ReactFragment
-            | React.ReactPortal
-            | null
-            | undefined;
-        }) => (
+      {props.question.answerOptions.map(
+        (item: { isCorrect: boolean; answerText: string }) => (
           <button onClick={() => props.handleAnswerOptionClick(item.isCorrect)}>
             {item.answerText}
           </button>

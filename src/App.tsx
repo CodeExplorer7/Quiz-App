@@ -47,8 +47,8 @@ export const App = () => {
         {showScore ? (
           <div className="section__score">
             <Result score={score} questions={questions} />
-            <Statusbar score={score} questions={questions} status={status} />
-            <ScoreLeftToWin ScoreLeftToWin={ScoreLeft} questions={questions} />
+            <Statusbar score={score} question={questions} status={status} />
+            <ScoreLeftToWin ScoreLeftToWin={ScoreLeft} question={questions} />
             <RefreshBtn handleRefresh={handleRefresh} />
           </div>
         ) : (
@@ -56,13 +56,12 @@ export const App = () => {
             <div className="question-section">
               <QuestionCount
                 currentQuestion={currentQuestion}
-                questions={questions}
+                question={questions}
               />
-              <QuestionText questions={questions[currentQuestion]} />
+              <QuestionText question={questions[currentQuestion]}  />
               <AnswerSection
-                questions={questions[currentQuestion]}
-                handleAnswerOptionClick={handleAnswerOptionClick}
-              />
+                  question={questions[currentQuestion]}
+                  handleAnswerOptionClick={handleAnswerOptionClick}                 />
             </div>
           </div>
         )}
@@ -74,8 +73,7 @@ export const App = () => {
         {showScore ? (
           <div className="section__score">
             <Result score={score} questions={questions} />
-            <Statusbar score={score} questions={questions} status={status} />
-
+            <Statusbar score={score} question={questions} status={status} />
             <RefreshBtn handleRefresh={handleRefresh} />
           </div>
         ) : (
@@ -83,13 +81,12 @@ export const App = () => {
             <div className="question-section">
               <QuestionCount
                 currentQuestion={currentQuestion}
-                questions={questions}
+                question={questions}
               />
-              <QuestionText questions={questions[currentQuestion]} />
+              <QuestionText question={questions[currentQuestion]}  />
               <AnswerSection
-                questions={questions[currentQuestion]}
-                handleAnswerOptionClick={handleAnswerOptionClick}
-              />
+                  question={questions[currentQuestion]}
+                  handleAnswerOptionClick={handleAnswerOptionClick}              />
             </div>
           </div>
         )}
