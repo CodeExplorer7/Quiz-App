@@ -48,7 +48,6 @@ body {
 
 .answer-section {
   width: 410px;
-  display: flex;
   font-display: column;
   justify-content: space-between;
 }
