@@ -8,7 +8,8 @@ import { QuestionCount } from "./components/QuestionCount";
 import { QuestionText } from "./components/QuestionText";
 import { AnswerSection } from "./components/AnswerSection";
 import { ScoreLeftToWin } from "./components/ScoreLeftToWin";
-import { SectionScore} from './components/SectionScore'
+import { SectionScoreAndScoreLeftToWin} from './components/SectionScoreAndScoreLeftToWin'
+import { SectionScore } from "./components/SectionScore";
 
 export const App = () => {
   const questions = Data;
@@ -44,7 +45,7 @@ export const App = () => {
     return (
       <div className="app">
         {showScore ? (
-          <SectionScore score={score} questions={questions} status={status} handleRefresh={handleRefresh} question={questions} ScoreLeftToWin={ScoreLeft}/>
+          <SectionScoreAndScoreLeftToWin score={score} questions={questions} status={status} handleRefresh={handleRefresh} question={questions} ScoreLeftToWin={ScoreLeft}/>
         ) : (
           <div className="quizz">
             <div className="question-section">
@@ -66,11 +67,7 @@ export const App = () => {
     return (
       <div className="app">
         {showScore ? (
-          <div className="section__score">
-            <Result score={score} questions={questions} />
-            <Statusbar score={score} question={questions} status={status} />
-            <RefreshBtn handleRefresh={handleRefresh} />
-          </div>
+          <SectionScore score={score} questions={questions} status={status} handleRefresh={handleRefresh} question={questions} ScoreLeftToWin={ScoreLeft}/>
         ) : (
           <div className="quizz">
             <div className="question-section">
