@@ -11,6 +11,7 @@ import { ScoreLeftToWin } from "./components/ScoreLeftToWin";
 import { SectionScoreAndScoreLeftToWin } from "./components/SectionScoreAndScoreLeftToWin";
 import { SectionScore } from "./components/SectionScore";
 import { QuizzAndScoreLeftToWin } from "./components/QuizzAndScoreLeftToWin";
+import { Quizz } from "./components/Quizz";
 
 export const App = () => {
   const questions = Data;
@@ -79,19 +80,12 @@ export const App = () => {
             ScoreLeftToWin={ScoreLeft}
           />
         ) : (
-          <div className="quizz">
-            <div className="question-section">
-              <QuestionCount
-                currentQuestion={currentQuestion}
-                question={questions}
-              />
-              <QuestionText question={questions[currentQuestion]} />
-              <AnswerSection
-                question={questions[currentQuestion]}
-                handleAnswerOptionClick={handleAnswerOptionClick}
-              />
-            </div>
-          </div>
+          <Quizz currentQuestion={currentQuestion}
+          questions={questions}
+          handleAnswerOptionClick={handleAnswerOptionClick}
+          ScoreLeftToWin={ScoreLeft}
+          score={score}
+          handleRefresh={handleRefresh}/>
         )}
       </div>
     );
