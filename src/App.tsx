@@ -8,8 +8,9 @@ import { QuestionCount } from "./components/QuestionCount";
 import { QuestionText } from "./components/QuestionText";
 import { AnswerSection } from "./components/AnswerSection";
 import { ScoreLeftToWin } from "./components/ScoreLeftToWin";
-import { SectionScoreAndScoreLeftToWin} from './components/SectionScoreAndScoreLeftToWin'
+import { SectionScoreAndScoreLeftToWin } from "./components/SectionScoreAndScoreLeftToWin";
 import { SectionScore } from "./components/SectionScore";
+import { QuizzAndScoreLeftToWin } from "./components/QuizzAndScoreLeftToWin";
 
 export const App = () => {
   const questions = Data;
@@ -45,21 +46,23 @@ export const App = () => {
     return (
       <div className="app">
         {showScore ? (
-          <SectionScoreAndScoreLeftToWin score={score} questions={questions} status={status} handleRefresh={handleRefresh} question={questions} ScoreLeftToWin={ScoreLeft}/>
+          <SectionScoreAndScoreLeftToWin
+            score={score}
+            questions={questions}
+            status={status}
+            handleRefresh={handleRefresh}
+            question={questions}
+            ScoreLeftToWin={ScoreLeft}
+          />
         ) : (
-          <div className="quizz">
-            <div className="question-section">
-              <QuestionCount
-                currentQuestion={currentQuestion}
-                question={questions}
-              />
-              <QuestionText question={questions[currentQuestion]} />
-              <AnswerSection
-                question={questions[currentQuestion]}
-                handleAnswerOptionClick={handleAnswerOptionClick}
-              />
-            </div>
-          </div>
+          <QuizzAndScoreLeftToWin
+            currentQuestion={currentQuestion}
+            questions={questions}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+            ScoreLeftToWin={ScoreLeft}
+            score={score}
+            handleRefresh={handleRefresh}
+          />
         )}
       </div>
     );
@@ -67,7 +70,14 @@ export const App = () => {
     return (
       <div className="app">
         {showScore ? (
-          <SectionScore score={score} questions={questions} status={status} handleRefresh={handleRefresh} question={questions} ScoreLeftToWin={ScoreLeft}/>
+          <SectionScore
+            score={score}
+            questions={questions}
+            status={status}
+            handleRefresh={handleRefresh}
+            question={questions}
+            ScoreLeftToWin={ScoreLeft}
+          />
         ) : (
           <div className="quizz">
             <div className="question-section">
