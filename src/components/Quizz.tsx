@@ -7,7 +7,7 @@ import { QuestionText } from "./QuestionText";
 export const Quizz = (props: {
   handleAnswerOptionClick: (isCorrect: boolean) => void;
   currentQuestion: number;
-  ScoreLeftToWin: number;
+  
   score: number;
   questions: Array <any> ;
 

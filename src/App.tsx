@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import Data from "./components/Data.json";
-import { Result } from "./components/Result";
-import { Statusbar } from "./components/Statusbar";
-import { RefreshBtn } from "./components/RefreshBtn";
-import { QuestionCount } from "./components/QuestionCount";
-import { QuestionText } from "./components/QuestionText";
-import { AnswerSection } from "./components/AnswerSection";
-import { ScoreLeftToWin } from "./components/ScoreLeftToWin";
 import { SectionScoreAndScoreLeftToWin } from "./components/SectionScoreAndScoreLeftToWin";
 import { SectionScore } from "./components/SectionScore";
 import { QuizzAndScoreLeftToWin } from "./components/QuizzAndScoreLeftToWin";
@@ -76,16 +69,15 @@ export const App = () => {
             questions={questions}
             status={status}
             handleRefresh={handleRefresh}
-            question={questions}
-            ScoreLeftToWin={ScoreLeft}
-          />
+            question={questions}          />
         ) : (
-          <Quizz currentQuestion={currentQuestion}
-          questions={questions}
-          handleAnswerOptionClick={handleAnswerOptionClick}
-          ScoreLeftToWin={ScoreLeft}
-          score={score}
-          handleRefresh={handleRefresh}/>
+          <Quizz
+              currentQuestion={currentQuestion}
+              questions={questions}
+              handleAnswerOptionClick={handleAnswerOptionClick}
+
+              score={score}
+              handleRefresh={handleRefresh}      />
         )}
       </div>
     );
