@@ -69,15 +69,16 @@ export const App = () => {
             questions={questions}
             status={status}
             handleRefresh={handleRefresh}
-            question={questions}          />
+            question={questions}
+          />
         ) : (
           <Quizz
-              currentQuestion={currentQuestion}
-              questions={questions}
-              handleAnswerOptionClick={handleAnswerOptionClick}
-
-              score={score}
-              handleRefresh={handleRefresh}      />
+            currentQuestion={currentQuestion}
+            questions={questions}
+            handleAnswerOptionClick={handleAnswerOptionClick}
+            score={score}
+            handleRefresh={handleRefresh}
+          />
         )}
       </div>
     );

@@ -3,30 +3,28 @@ import { AnswerSection } from "./AnswerSection";
 import { QuestionCount } from "./QuestionCount";
 import { QuestionText } from "./QuestionText";
 
-
 export const QuizzAndScoreLeftToWin = (props: {
   handleAnswerOptionClick: (isCorrect: boolean) => void;
   currentQuestion: number;
   ScoreLeftToWin: number;
   score: number;
-  questions: Array <any> ;
+  questions: Array<any>;
 
-  
   handleRefresh: () => void;
 }) => {
   return (
     <div className="quizz">
-            <div className="question-section">
-              <QuestionCount
-                currentQuestion={props.currentQuestion}
-                question={props.questions}
-              />
-              <QuestionText question={props.questions[props.currentQuestion]} />
-              <AnswerSection
-                question={props.questions[props.currentQuestion]}
-                handleAnswerOptionClick={props.handleAnswerOptionClick}
-              />
-            </div>
-          </div>
+      <div className="question-section">
+        <QuestionCount
+          currentQuestion={props.currentQuestion}
+          question={props.questions}
+        />
+        <QuestionText question={props.questions[props.currentQuestion]} />
+        <AnswerSection
+          question={props.questions[props.currentQuestion]}
+          handleAnswerOptionClick={props.handleAnswerOptionClick}
+        />
+      </div>
+    </div>
   );
 };

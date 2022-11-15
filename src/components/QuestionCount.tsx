@@ -6,8 +6,7 @@ export const QuestionCount = (props: {
 }) => {
   return (
     <div className="question-count">
-      <span> Вопрос {props.currentQuestion + 1} </span> /
-      {props.question.length}
+      <span> Вопрос {props.currentQuestion + 1} </span> /{props.question.length}
     </div>
   );
 };
