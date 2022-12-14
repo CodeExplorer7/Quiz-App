@@ -1,0 +1,38 @@
+[
+  {
+    "questionText": "Столица США?",
+    "answerOptions": [
+      { "answerText": "Бостон", "isCorrect": false },
+      { "answerText": "Мадрид", "isCorrect": false },
+      { "answerText": "Краснодар", "isCorrect": false },
+      { "answerText": "Вашингтон", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "В каком году был изобретён первый iPhone?",
+    "answerOptions": [
+      { "answerText": "2001", "isCorrect": false },
+      { "answerText": "2004", "isCorrect": false },
+      { "answerText": "2007", "isCorrect": true },
+      { "answerText": "2011", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Сколько л/с в Т34?",
+    "answerOptions": [
+      { "answerText": "около 200", "isCorrect": false },
+      { "answerText": "около 700", "isCorrect": false },
+      { "answerText": "около 4000", "isCorrect": false },
+      { "answerText": "около 500", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "В каком году началась первая мировая война?",
+    "answerOptions": [
+      { "answerText": "1914", "isCorrect": true },
+      { "answerText": "1900", "isCorrect": false },
+      { "answerText": "1899", "isCorrect": false },
+      { "answerText": "1931", "isCorrect": false }
+    ]
+  }
+]
